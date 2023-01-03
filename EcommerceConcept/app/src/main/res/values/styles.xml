@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="mark_pro_title">
+        <item name="android:textColor">@color/my_dark_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@font/mark_pro</item>
+    </style>
+    <style name="see_more_style">
+        <item name="android:textColor">@color/my_orange</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/mark_pro</item>
+    </style>
+</resources>
