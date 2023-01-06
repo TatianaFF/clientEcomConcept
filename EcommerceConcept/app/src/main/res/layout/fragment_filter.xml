@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.filterFragment.FilterFragment">
+    tools:context=".presentation.ui.fragments.filterFragment.FilterFragment">
 
 
     <androidx.appcompat.widget.Toolbar

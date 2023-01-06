@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+//        applicationId "com.example.data"
+        minSdk 21
+        targetSdk 32
+//        versionCode 1
+//        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+//java {
+//    sourceCompatibility = JavaVersion.VERSION_11
+//    targetCompatibility = JavaVersion.VERSION_11
+//}
+
+dependencies {
+    implementation(project(":data"))
+    implementation(project(":models"))
+
+    // Javax Inject
+    api("javax.inject:javax.inject:1")
+
+    // Kotlin Coroutines
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    // Paging
+    implementation("androidx.paging:paging-common:3.1.1")
+}
